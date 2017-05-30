@@ -23,3 +23,16 @@
     brew install jenkins
 ### Install the LTS version
     brew install jenkins-lts
+
+## Docker
+  You must have Docker properly installed on your machine. See the Docker installation guide for details.
+
+### First, pull the official jenkins image from Docker repository.
+    docker pull jenkins
+    
+### Next, 
+    docker run -d -p 49001:8080 -v $PWD/jenkins:/var/jenkins_home -t jenkins
+    
+run a container using this image and map data directory from the container to the host
+e.g inthe example below /var/jenkins_home from the container is mapped to jenkins/ directory from the
+current path on the host. Jenkins 8080 port is also exposed to the host as 49001.
