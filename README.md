@@ -36,3 +36,7 @@
 run a container using this image and map data directory from the container to the host
 e.g inthe example below /var/jenkins_home from the container is mapped to jenkins/ directory from the
 current path on the host. Jenkins 8080 port is also exposed to the host as 49001.
+
+### In the terminal window, we'll use the cat command to display the password:
+
+    sudo cat /var/lib/jenkins/secrets/initialAdminPassword
